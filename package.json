@@ -1,0 +1,44 @@
+{
+    "name": "freebasic",
+    "displayName": "FreeBASIC",
+    "description": "Modern FreeBASIC language support for Visual Studio Code.",
+    "version": "0.0.0",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "license": "MIT",
+    "publisher": "sorucoder",
+    "keywords": [
+        "freebasic"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sorucoder/freebasic-vscode-extension"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "freebasic",
+                "aliases": [
+                    "FreeBASIC",
+                    "freebasic"
+                ],
+                "extensions": [
+                    ".bas",
+                    ".bi"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "freebasic",
+                "scopeName": "source.freebasic",
+                "path": "./syntaxes/freebasic.tmLanguage.json"
+            }
+        ]
+    }
+}
