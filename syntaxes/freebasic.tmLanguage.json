@@ -507,7 +507,7 @@
 		
 		"operators": {
 			"name": "keyword.operator.freebasic",
-			"match": "(?i)(?:[\\+\\-\\*/\\\\^@&\\.,;]|=>?|<>|[<>]=?|->|\\b(?:cast|procptr|strptr|varptr|new|delete|mod|shl|shr|not|and|or|eqv|imp|xor|let)\\b)"
+			"match": "(?i)(?:\\b(?:cast|procptr|strptr|varptr|new|delete|mod|shl|shr|not|and|or|eqv|imp|xor|let|andalso|orelse)\\b|=>?|\\.|->|<>|[<>]=?|\\+|-|\\*|/|\\\\|\\^|@|&|,|;)"
 		},
 
 		"declarations": {
@@ -644,7 +644,7 @@
 		},
 		"type-alias-declarations": {
 			"name": "meta.declaration.type.alias.freebasic",
-			"match": "(?i)\\b(type)[ \t]+([a-z_][a-z0-9_]*)[ \t]+(as)[ \t]+([a-z_][a-z0-9_]*)",
+			"match": "(?i)\\b((?<!\\.|->)type)[ \t]+([a-z_][a-z0-9_]*)[ \t]+(as)[ \t]+([a-z_][a-z0-9_]*)",
 			"captures": {
 				"1": { "name": "keyword.other.declaration.type.freebasic" },
 				"2": { "name": "entity.name.type.freebasic" },
@@ -654,7 +654,7 @@
 		},
 		"type-declarations": {
 			"name": "meta.declaration.type.freebasic",
-			"begin": "(?i)\\b(type)[ \t]+([a-z_][a-z0-9_]*)",
+			"begin": "(?i)\\b((?<!\\.|->)type)[ \t]+([a-z_][a-z0-9_]*)",
 			"beginCaptures": {
 				"1": { "name": "keyword.other.declaration.type.begin.freebasic" },
 				"2": { "name": "entity.name.type.freebasic" }
@@ -909,7 +909,7 @@
 		},
 		"class-declarations": {
 			"name": "meta.declaration.class.freebasic",
-			"begin": "(?i)\\b(class)\\b",
+			"begin": "(?i)\\b((?<!\\.|->)class)\\b",
 			"beginCaptures": {
 				"1": { "name": "invalid.illegal.unimplemented.freebasic" }
 			},
